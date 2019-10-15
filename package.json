@@ -2,21 +2,35 @@
   "name": "testcafe-pollyjs-demo",
   "version": "0.1.0",
   "private": true,
+  "scripts": {
+    "start": "react-scripts start",
+    "start:polly": "polly listen -d ./test/polly/recordings -p 4000",
+    "build": "react-scripts build",
+    "test": "testcafe \"chromium\" -d test/tests",
+    "eject": "react-scripts eject"
+  },
   "dependencies": {
+    "@apollo/react-hooks": "^3.1.2",
     "@types/jest": "24.0.18",
     "@types/node": "12.7.12",
     "@types/react": "16.9.5",
     "@types/react-dom": "16.9.1",
+    "apollo-boost": "^0.4.4",
+    "graphql": "^14.5.8",
     "react": "^16.10.2",
     "react-dom": "^16.10.2",
     "react-scripts": "3.2.0",
     "typescript": "3.6.4"
   },
-  "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+  "devDependencies": {
+    "@pollyjs/adapter-fetch": "2.6.3",
+    "@pollyjs/adapter-xhr": "2.6.3",
+    "@pollyjs/cli": "2.6.3",
+    "@pollyjs/core": "2.6.3",
+    "@pollyjs/persister-rest": "2.6.3",
+    "testcafe": "1.4.0",
+    "testcafe-browser-provider-browserstack": "1.9.0",
+    "testcafe-react-selectors": "3.1.0"
   },
   "eslintConfig": {
     "extends": "react-app"
